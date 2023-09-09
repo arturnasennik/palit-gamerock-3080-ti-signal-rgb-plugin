@@ -92,58 +92,7 @@ function SetGPUNameFromBusIds() {
 	}
 }
 
-function sendColors(overrideColor) {
 
-	let color = device.color(2, 1);
-	bus.WriteByte(PNYGPU.registers.R, color[0]);
-	bus.WriteByte(PNYGPU.registers.G, color[1]);
-	bus.WriteByte(PNYGPU.registers.B, color[2]);
-
-	color = device.color(3, 2);
-	bus.WriteByte(PNYGPU.registers.R, color[0]);
-	bus.WriteByte(PNYGPU.registers.G, color[1]);
-	bus.WriteByte(PNYGPU.registers.B, color[2]);
-
-	color = device.color(3, 3);
-	bus.WriteByte(PNYGPU.registers.R, color[0]);
-	bus.WriteByte(PNYGPU.registers.G, color[1]);
-	bus.WriteByte(PNYGPU.registers.B, color[2]);
-
-	color = device.color(2, 3);
-	bus.WriteByte(PNYGPU.registers.R, color[0]);
-	bus.WriteByte(PNYGPU.registers.G, color[1]);
-	bus.WriteByte(PNYGPU.registers.B, color[2]);
-
-	color = device.color(4, 3);
-	bus.WriteByte(PNYGPU.registers.R, color[0]);
-	bus.WriteByte(PNYGPU.registers.G, color[1]);
-	bus.WriteByte(PNYGPU.registers.B, color[2]);
-
-	color = device.color(4, 4);
-	bus.WriteByte(PNYGPU.registers.R, color[0]);
-	bus.WriteByte(PNYGPU.registers.G, color[1]);
-	bus.WriteByte(PNYGPU.registers.B, color[2]);
-
-	color = device.color(5, 4);
-	bus.WriteByte(PNYGPU.registers.R, color[0]);
-	bus.WriteByte(PNYGPU.registers.G, color[1]);
-	bus.WriteByte(PNYGPU.registers.B, color[2]);
-
-	color = device.color(5, 5);
-	bus.WriteByte(PNYGPU.registers.R, color[0]);
-	bus.WriteByte(PNYGPU.registers.G, color[1]);
-	bus.WriteByte(PNYGPU.registers.B, color[2]);
-
-	color = device.color(6, 5);
-	bus.WriteByte(PNYGPU.registers.R, color[0]);
-	bus.WriteByte(PNYGPU.registers.G, color[1]);
-	bus.WriteByte(PNYGPU.registers.B, color[2]);
-
-	color = device.color(6, 6);
-	bus.WriteByte(PNYGPU.registers.R, color[0]);
-	bus.WriteByte(PNYGPU.registers.G, color[1]);
-	bus.WriteByte(PNYGPU.registers.B, color[2]);
-}
 
 class PNYGPUController {
 	constructor() {
