@@ -3,7 +3,7 @@
 export function Name() { return "ewtsdf"; }
 export function Publisher() { return "sdfgsdfg"; }
 export function Type() { return "SMBUS"; }
-export function Size() { return [3, 1]; }
+export function Size() { return [8, 8]; }
 export function DefaultPosition(){return [5, 2];}
 export function DefaultScale(){return 2.5;}
 export function LedNames() { return vLedNames; }
