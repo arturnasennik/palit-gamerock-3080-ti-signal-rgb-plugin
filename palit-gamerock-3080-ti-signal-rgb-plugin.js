@@ -1,4 +1,5 @@
 export function Name() { return "test"; }
+export function VendorId() { return 0x1569; }
 export function ProductId() { return 0x2208; }
 export function Publisher() { return "WhirlwindFX"; }
 export function Documentation(){ return "troubleshooting/brand"; }
