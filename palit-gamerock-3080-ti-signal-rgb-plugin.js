@@ -6,7 +6,7 @@ export function Documentation(){ return "troubleshooting/brand"; }
 export function Size() { return [30, 10]; }
 export function DefaultPosition(){return [240, 120];}
 export function DefaultScale(){return 8.0;}
-export function Type() { return "RAWUSB"; }
+export function Type() { return "Hid"; }
 /* global
 shutdownColor:readonly
 LightingMode:readonly
