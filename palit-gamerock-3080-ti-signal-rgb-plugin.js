@@ -94,10 +94,36 @@ function SetGPUNameFromBusIds() {
 
 function sendColors(overrideColor) {
 
-	let color = device.color(0, 1);
-	bus.WriteByte(PNYGPU.registers.R, color[0]);
-	bus.WriteByte(PNYGPU.registers.G, color[1]);
-	bus.WriteByte(PNYGPU.registers.B, color[2]);
+	// example header packet
+	let packet = [];
+	packet[0] = 0x00; //Zero Padding
+	packet[1] = 0x00;
+	packet[2] = 0x00;
+	packet[3] = 0x00;
+	packet[4] = 0x00;
+	packet[5] = 0x00;
+	packet[6] = 0x00;
+
+
+	for (var idx = 0; idx < vLedPositions.length; idx++) {
+		let iPxX = vLedPositions[idx][0];
+		let iPxY = vLedPositions[idx][1];
+		var color;
+
+		if(overrideColor){
+			color = hexToRgb(overrideColor);
+		}else if (LightingMode === "Forced") {
+			color = hexToRgb(forcedColor);
+		}else{
+			color = device.color(iPxX, iPxY);
+		}
+		packet[idx] = color[0];
+		packet[idx+1] = color[1];
+		packet[idx+2] = color[2];
+	}
+
+	//packet[89] = CalculateCrc(packet); // Example Crc
+	device.send_report(packet, 65); // Send commands
 
 }
 
