@@ -92,7 +92,14 @@ function SetGPUNameFromBusIds() {
 	}
 }
 
+function sendColors(overrideColor) {
 
+	let color = device.color(0, 1);
+	bus.WriteByte(PNYGPU.registers.R, color[0]);
+	bus.WriteByte(PNYGPU.registers.G, color[1]);
+	bus.WriteByte(PNYGPU.registers.B, color[2]);
+
+}
 
 class PNYGPUController {
 	constructor() {
