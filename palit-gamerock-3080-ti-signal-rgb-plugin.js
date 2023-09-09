@@ -92,24 +92,27 @@ function SetGPUNameFromBusIds() {
 }
 
 function sendColors(overrideColor) {
-	for (var idx = 0; idx < vLedPositions.length; idx++) {
-		let iPxX = vLedPositions[idx][0];
-		let iPxY = vLedPositions[idx][1];
-		let color;
-	
-		if(overrideColor) {
-			color = hexToRgb(overrideColor);
-		} else if (LightingMode === "Forced") {
-			color = hexToRgb(forcedColor);
-		} else {
-			color = device.color(iPxX, iPxY);
-		}
-	
-		bus.WriteByte(PNYGPU.registers.R, color[0]);
-		bus.WriteByte(PNYGPU.registers.G, color[1]);
-		bus.WriteByte(PNYGPU.registers.B, color[2]);
 
-	}
+	let color = device.color(0, 1);
+	bus.WriteByte(PNYGPU.registers.R, color[0]);
+	bus.WriteByte(PNYGPU.registers.G, color[1]);
+	bus.WriteByte(PNYGPU.registers.B, color[2]);
+
+	color = device.color(1, 1);
+	bus.WriteByte(PNYGPU.registers.R, color[0]);
+	bus.WriteByte(PNYGPU.registers.G, color[1]);
+	bus.WriteByte(PNYGPU.registers.B, color[2]);
+	
+
+	color = device.color(1, 2);
+	bus.WriteByte(PNYGPU.registers.R, color[0]);
+	bus.WriteByte(PNYGPU.registers.G, color[1]);
+	bus.WriteByte(PNYGPU.registers.B, color[2]);
+
+	color = device.color(2, 2);
+	bus.WriteByte(PNYGPU.registers.R, color[0]);
+	bus.WriteByte(PNYGPU.registers.G, color[1]);
+	bus.WriteByte(PNYGPU.registers.B, color[2]);
 }
 
 class PNYGPUController {
