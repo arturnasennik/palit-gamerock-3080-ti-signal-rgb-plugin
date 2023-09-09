@@ -1,5 +1,5 @@
 export function Name() { return "Palit GameRock 3080 TI"; }
-export function VendorId() { return "NVIDIA"; }
+export function VendorId() { return 0x1569; }
 export function ProductId() { return 0x2208; }
 export function Publisher() { return "Test"; }
 export function Documentation(){ return "troubleshooting/brand"; }
