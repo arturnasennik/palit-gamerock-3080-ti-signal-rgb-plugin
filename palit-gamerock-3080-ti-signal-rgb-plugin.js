@@ -22,14 +22,18 @@ export function ControllableParameters() {
 }
 
 let vLedNames = [
-	"Led 1",
+    "Led 1",
     "Led 2",
     "Led 3",
     "Led 4",
+    "Led 5",
+    "Led 6",
+    "Led 7",
+    "Led 8",
 ];
 
 let vLedPositions = [
-	[0, 0], [0, 1], [0, 2], [0, 3],
+	[0, 0], [0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [0, 6], [0, 7],
 ];
 
 /** @param {FreeAddressBus} bus */
