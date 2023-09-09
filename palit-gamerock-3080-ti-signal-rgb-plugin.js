@@ -59,6 +59,7 @@ export function Scan(bus) {
 }
 
 export function Initialize() {
+	console.log(bus);
 	bus.WriteByte(PNYGPU.registers.Control, 0x00);
 	bus.WriteByte(PNYGPU.registers.Mode, 0x01);
 	bus.WriteByte(PNYGPU.registers.Brightness, 0x64);
