@@ -22,11 +22,15 @@ export function ControllableParameters(){
 let vLedNames = [
 	"Led 1",
 	"Led 2",
+	"Led 3",
+	"Led 4",
 ];
 
 let vLedPositions = [
 	[0, 0],
 	[0, 1],
+	[1, 1],
+	[1, 0],
 ];
 
 export function LedNames() {
