@@ -66,9 +66,6 @@ function sendColors(overrideColor) {
 	packet[1] = 0x00;
 	packet[2] = 0x00;
 	packet[3] = 0x00;
-	packet[4] = 0x00;
-	packet[5] = 0x00;
-	packet[6] = 0x00;
 
 
 	for (var idx = 0; idx < vLedPositions.length; idx++) {
