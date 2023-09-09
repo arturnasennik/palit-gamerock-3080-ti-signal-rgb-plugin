@@ -94,17 +94,7 @@ function SetGPUNameFromBusIds() {
 
 function sendColors(overrideColor) {
 
-	let color = device.color(0, 1);
-	bus.WriteByte(PNYGPU.registers.R, color[0]);
-	bus.WriteByte(PNYGPU.registers.G, color[1]);
-	bus.WriteByte(PNYGPU.registers.B, color[2]);
-
-	device.color(1, 0);
-	bus.WriteByte(PNYGPU.registers.R, color[0]);
-	bus.WriteByte(PNYGPU.registers.G, color[1]);
-	bus.WriteByte(PNYGPU.registers.B, color[2]);
-
-	color = device.color(1, 1);
+	let color = device.color(1, 1);
 	bus.WriteByte(PNYGPU.registers.R, color[0]);
 	bus.WriteByte(PNYGPU.registers.G, color[1]);
 	bus.WriteByte(PNYGPU.registers.B, color[2]);
